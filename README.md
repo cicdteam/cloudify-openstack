@@ -3,10 +3,10 @@
 Blueprints allow bootstrap Cloudify Manager on current Openstack infrastructure
 using current Router, curent Private (fixed IP's) and Public (floating IP's) networks.
 
-### Boostrap
+### Bootstrap
 
 - create simple VM instance for CFY (use Centos7 image, 1 VCPU, 1 Gb RAM)
-- clone current repo to VM
+- clone current repo to VM ('git clone https://github.com/taranik/cloudify-openstack.git')
 - check and set variables in `own-openstack-manager-blueprint-inputs.yaml`
 - install CFY 3.3.1 on VM by **build_cfy.sh**
 - relogin to CFY VM or use `source /opt/cfy/env/bin/activate`
@@ -25,6 +25,6 @@ the cfy bootstrap command. These variables are:
 These settings are available in the Openstack Horizon dashboard
 (Look for API credentials).
 
->NOTE: Cloudify Manager uses VM with 4 Gb RAM minimu for normal work
+>NOTE: Cloudify Manager uses VM with 4 Gb RAM minimum for normal work
 (heap size of Elasticache is 2 Gb).
 
