@@ -1,0 +1,40 @@
+# Credentials and identification in order to connect to openstack
+keystone_username:    ''
+keystone_password:    ''
+keystone_tenant_name: ''
+keystone_url:         ''
+region:               ''
+
+# Image and flavor that will be used to create the manager machine.
+#
+# NOTE: must use Centos7 image and flavor with 4 Gb memory!
+#
+#image_id:  ''
+#flavor_id: ''
+image_id: '73da0e1f-e8d1-42a5-9744-d6240cfedd2d'
+flavor_id: '3'
+
+# Name of the external openstack network (with floating IP's)
+external_network_name:   'public'
+
+# Name of the private openstack network, subnet and cidr (with fixed IP's)
+management_network_name: 'private'
+management_subnet_name:  'private-subnet'
+management_subnet_cidr:  '10.0.0.0/24'
+management_router:       'router1'
+
+
+# The bootstrap process creates 2 key pairs in order to connect to the management machine and application hosts.
+# Set these properties to true (one or both) if you want to use existing key pairs, and not create new ones.
+use_existing_manager_keypair: false
+use_existing_agent_keypair:   false
+
+# These are the local paths where the key files will be created at bootstrap.
+# If existing key pairs are used (see above), the key files should be at these paths for cloudify to find.
+ssh_key_filename:       ~/.ssh/cfy-manager.pem
+agent_private_key_path: ~/.ssh/cfy-agent.pem
+
+# These are the key names in openstack that will be created at bootstrap.
+# If existing key pairs are used (see above), bootstrap will use the provided names, and will not create new ones.
+manager_public_key_name: 'cfy-manager'
+agent_public_key_name:   'cfy-agent'
