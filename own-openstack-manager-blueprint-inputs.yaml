@@ -5,6 +5,10 @@ keystone_tenant_name: ''
 keystone_url:         ''
 region:               ''
 
+# Password for admin user (used for WebUI)
+#
+admin_password: supersecretpass
+
 # Image and flavor that will be used to create the manager machine.
 #
 # NOTE: must use Centos7 image and flavor with 4 Gb memory!

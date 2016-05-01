@@ -121,7 +121,7 @@ inputs:
   # Security Settings
   #############################
   security_enabled:
-    default: false
+    default: true
 
   ssl_enabled:
     default: false
@@ -845,7 +845,7 @@ node_templates:
   #     - type: cloudify.relationships.depends_on
   #       target: nginx
   #     - type: cloudify.relationships.depends_on
-  #       target: restservice
+  #       target: rest_service
 
 plugins:
   cli:
