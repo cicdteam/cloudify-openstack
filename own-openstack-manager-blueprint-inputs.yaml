@@ -14,8 +14,8 @@ admin_password: supersecretpass
 #
 # NOTE: must use Centos7 image and flavor with as minimum 4 Gb of memory!
 #
-#image_id:  ''
-#flavor_id: ''
+#image_name:  ''
+#flavor_name: ''
 image_name: 'CentOS-7-x86_64-GenericCloud'
 flavor_name: 'm1.medium'
 
