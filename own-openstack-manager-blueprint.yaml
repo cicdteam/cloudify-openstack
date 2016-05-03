@@ -49,10 +49,10 @@ inputs:
   agent_public_key_name:
     type: string
 
-  image_id:
+  image_name:
     type: string
 
-  flavor_id:
+  flavor_name:
     type: string
 
   external_network_name:
@@ -67,7 +67,7 @@ inputs:
     default: false
 
   manager_server_name:
-    default: cloudify-manager-server
+    default: cloudify-manager
     type: string
 
   ssh_user:
@@ -692,8 +692,8 @@ node_templates:
       resource_id: { get_input: manager_server_name }
       install_agent: false
       server:
-        image: { get_input: image_id }
-        flavor: { get_input: flavor_id }
+        image_name: { get_input: image_name }
+        flavor_name: { get_input: flavor_name }
       management_network_name: { get_property: [management_network, resource_id] }
       openstack_config: *openstack_configuration
     relationships:

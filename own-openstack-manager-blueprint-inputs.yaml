@@ -15,8 +15,8 @@ admin_password: supersecretpass
 #
 #image_id:  ''
 #flavor_id: ''
-image_id: '73da0e1f-e8d1-42a5-9744-d6240cfedd2d'
-flavor_id: '3'
+image_name: 'CentOS-7-x86_64-GenericCloud'
+flavor_name: 'm1.medium'
 
 # Name of the external openstack network (with floating IP's)
 external_network_name:   'public'
